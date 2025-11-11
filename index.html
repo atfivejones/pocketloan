@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TrustLend — Simple, court-friendly promissory notes</title>
+  <meta name="description" content="Create a clear, court-friendly promissory note on any phone. Real signatures, clean PDF, and an audit hash for integrity." />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <style>
+    /* page-only accents that complement assets/css/main.css */
+    :root {
+      --brand:#0a1f44;     /* deep trust blue */
+      --brand-2:#116466;   /* teal accent */
+      --ink:#0a1f44;
+      --muted:#475569;
+      --soft:#f8fafc;
+      --line:#e5e7eb;
+      --cta:#3b82f6;
+    }
+    .hero {background: linear-gradient(180deg, #f7fafc 0%, #ffffff 100%);}
+    .badge {display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--brand);}
+    .kpi {text-align:center;border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff;}
+    .pill {display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#fff;color:var(--muted);font-size:13px;}
+    .list-check li{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
+    .list-check span{font-weight:600}
+    .card.soft {background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
+    .gradient-callout {background: linear-gradient(135deg, #0a1f44 0%, #1f3a8a 55%, #116466 100%); color:#fff; border-radius:14px; padding:20px;}
+    .mini {font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div id="siteNav"></div>
+
+  <main class="wrap">
+    <!-- Hero -->
+    <section class="hero card" style="border:none">
+      <div class="grid2" style="align-items:center">
+        <div>
+          <div class="badge">Phone-first • Court-friendly • Straightforward</div>
+          <h1 style="margin:12px 0 8px;font-size:34px;line-height:1.15;color:var(--brand)">
+            Create a professional promissory note in minutes
+          </h1>
+          <p class="muted" style="font-size:17px;max-width:560px">
+            Clear terms, real signatures, and a clean PDF you can bring to small claims. 
+            Designed to protect both your money <em>and</em> the relationship.
+          </p>
+          <div style="margin:14px 0 8px;display:flex;gap:8px;flex-wrap:wrap">
+            <span class="pill">In-person or shared device signing</span>
+            <span class="pill">ESIGN consent & signature timestamps</span>
+            <span class="pill">Audit hash (SHA-256) for integrity</span>
+            <span class="pill">1–2 page, judge-friendly layout</span>
+          </div>
+          <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="/create-note.html">Create a note →</a>
+            <a class="btn" href="#why" style="background:#fff;color:var(--brand);border:1px solid var(--line)">How it works</a>
+          </div>
+          <p class="mini" style="margin-top:10px">No accounts needed to preview. You’ll sign in before generating the PDF.</p>
+        </div>
+
+        <!-- Compact preview card -->
+        <div class="card soft">
+          <h2 style="margin:0 0 10px">Preview (example)</h2>
+          <div class="card" style="background:var(--soft)">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:14px">
+              <div><div class="mini">Loan Amount</div><strong>$1,200</strong></div>
+              <div><div class="mini">Schedule</div><strong>Monthly • 6x</strong></div>
+              <div><div class="mini">Start Date</div><strong>2025-05-01</strong></div>
+              <div><div class="mini">Final Due</div><strong>2025-10-31</strong></div>
+            </div>
+          </div>
+          <ul class="list-check mini" style="margin:10px 0 0">
+            <li>✔️ ESIGN consent & signature timestamps</li>
+            <li>✔️ Audit footer with PDF SHA-256</li>
+            <li>✔️ Venue & default/acceleration clause</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why / 4 steps -->
+    <section id="why" class="card soft">
+      <h2 style="margin-top:0">From “Can I borrow…?” to a signed note in 4 steps</h2>
+      <div class="grid2">
+        <div class="kpi"><div class="mini">Step 1</div><strong>Enter details</strong><div class="mini">amount, term, schedule</div></div>
+        <div class="kpi"><div class="mini">Step 2</div><strong>Add parties</strong><div class="mini">lender & borrower</div></div>
+        <div class="kpi"><div class="mini">Step 3</div><strong>Sign on device</strong><div class="mini">both parties sign</div></div>
+        <div class="kpi"><div class="mini">Step 4</div><strong>Generate PDF</strong><div class="mini">download & share</div></div>
+      </div>
+    </section>
+
+    <!-- What you actually get today (MVP-aligned) -->
+    <section class="card soft">
+      <h2 style="margin-top:0">What’s included</h2>
+      <div class="grid2" style="align-items:start">
+        <ul class="list-check">
+          <li>✔️ <span>Court-friendly PDF</span> with concise 1–2 page layout</li>
+          <li>✔️ <span>ESIGN consent</span> and timestamped signatures for both parties</li>
+          <li>✔️ <span>Audit footer</span> (PDF SHA-256 + server UTC)</li>
+          <li>✔️ <span>Clear terms</span> for venue, late/default, and acceleration</li>
+          <li>✔️ <span>Phone-first experience</span>—works great in person</li>
+        </ul>
+        <ul class="list-check">
+          <li>○ <span>Optional anchoring</span> (OpenTimestamps) <em>coming soon</em></li>
+          <li>○ <span>Email receipts</span> to both parties <em>coming soon</em></li>
+          <li>○ <span>ID verification</span> (Maximum plan) <em>roadmap</em></li>
+          <li>○ <span>Automated reminders</span> <em>roadmap</em></li>
+        </ul>
+      </div>
+      <p class="mini" style="margin-top:6px">We only promise what’s live today. Roadmap items appear after launch.</p>
+    </section>
+
+    <!-- Pricing: Essential only + tasteful upsell -->
+    <section id="pricing" class="card soft">
+      <h2 style="margin-top:0">Simple, one-time pricing</h2>
+      <div class="grid2">
+        <div class="card soft">
+          <h3 style="margin:0 0 6px">Essential Protection</h3>
+          <div style="font-weight:800;font-size:28px;color:var(--cta)">$14.99</div>
+          <div class="mini">One-time fee per contract</div>
+          <ul class="list-check" style="margin-top:10px">
+            <li>✔️ Court-friendly PDF</li>
+            <li>✔️ ESIGN consent + signatures</li>
+            <li>✔️ Audit footer (SHA-256 hash)</li>
+            <li>✔️ Venue & default language</li>
+          </ul>
+          <a class="btn" href="/create-note.html" style="margin-top:10px">Get Essential →</a>
+        </div>
+
+        <div class="gradient-callout">
+          <h3 style="margin:0 0 6px">Need extra checks later?</h3>
+          <p class="mini" style="color:#e5e7eb">
+            Upgrade any time to **Maximum** ($29.99) to add ID verification and expanded audit data.
+          </p>
+          <p class="mini" style="margin:6px 0 0;opacity:.85">
+            We’ll only show this when those features are live.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credibility strip -->
+    <section class="card soft">
+      <h2 style="margin-top:0">Built for clarity—written for judges and humans</h2>
+      <p class="muted" style="max-width:820px">
+        The PDF is intentionally minimal: clear terms, signature block, and an audit footer. 
+        It’s designed to reduce ambiguity and make small-claims presentations straightforward.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+        <span class="pill">Plain-English headings</span>
+        <span class="pill">Short paragraphs</span>
+        <span class="pill">Consistent dates & amounts</span>
+        <span class="pill">Readable on mobile</span>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="card soft" style="text-align:center">
+      <h2 style="margin:0 0 8px">Ready to make it official?</h2>
+      <p class="muted">Create your promissory note now—sign together and download the PDF in minutes.</p>
+      <div style="margin-top:10px">
+        <a class="btn" href="/create-note.html">Create a note →</a>
+      </div>
+      <p class="mini" style="margin-top:8px">You’ll sign in before generating the PDF.</p>
+    </section>
+  </main>
+
+  <script src="/js/nav-gate.js"></script>
+</body>
+</html>
