@@ -11,7 +11,7 @@
 
     <h1 class="text-2xl font-bold mb-6">Create Promissory Note</h1>
 
-    <!-- Progress -->
+    <!-- Progress dots -->
     <div class="flex items-center gap-3 mb-6" id="progressDots">
       <div class="w-2.5 h-2.5 rounded-full bg-blue-600"></div>
       <div class="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
@@ -116,7 +116,7 @@
       </div>
     </section>
 
-    <!-- STEP 3: Options & Add-Ons (all extras live here) -->
+    <!-- STEP 3: Options & Add-Ons -->
     <section id="step-3" class="form-step hidden">
       <h2 class="text-xl font-semibold mb-4">3. Options & Add-Ons</h2>
 
@@ -255,7 +255,7 @@
     import { TL_PLAN_NAME, TL_PLAN_PRICE } from './js/constants.js';
     import { applyPlanToPreview, parseISO, iso, addMonths, addDays } from './js/preview-hooks.js';
 
-    // stepper
+    // Stepper
     const steps = Array.from(document.querySelectorAll('.form-step'));
     const dots  = Array.from(document.querySelectorAll('#progressDots > div'));
     let idx = 0;
@@ -274,7 +274,7 @@
     document.querySelectorAll('.btn-prev').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();show(idx-1);}));
     show(0);
 
-    // centralize plan everywhere
+    // Centralize plan price/name
     function syncPlanEverywhere(){
       applyPlanToPreview();
       const payName  = document.getElementById('payPlanName');
@@ -284,7 +284,7 @@
     }
     syncPlanEverywhere();
 
-    // date math + preview
+    // Dates + preview
     const start = document.getElementById('loanStartDate');
     const term  = document.getElementById('loanTerm');
     const sched = document.getElementById('paymentSchedule');
@@ -310,7 +310,7 @@
         else if (v==='lump')     due = final && final.value ? parseISO(final.value) : addMonths(s, m||1);
         if (due) first.value = iso(due);
       }
-      // preview panel
+      // Preview
       document.getElementById('pvAmount').textContent   = document.getElementById('loanAmount').value || '—';
       document.getElementById('pvStart').textContent    = start.value || '—';
       document.getElementById('pvTerm').textContent     = term.selectedOptions[0]?.textContent || '—';
@@ -318,7 +318,7 @@
       document.getElementById('pvFirst').textContent    = first.value || '—';
       document.getElementById('pvFinal').textContent    = final.value || '—';
 
-      // installments
+      // Installments (summary only)
       const countEl = document.getElementById('installmentCount');
       const sumEl   = document.getElementById('installmentSummary');
       let count = 0;
@@ -335,7 +335,7 @@
     [start, term, sched, first, final, document.getElementById('loanAmount')].forEach(el=>el&&el.addEventListener('change',recomputeDates));
     recomputeDates();
 
-    // add-ons toggles
+    // Add-ons toggles
     const lateToggle = document.getElementById('enableLateFee');
     const lateText   = document.getElementById('lateFeeText');
     lateToggle?.addEventListener('change', ()=> lateText.style.display = lateToggle.checked ? 'block' : 'none');
@@ -411,9 +411,9 @@
       show(6);
     });
 
-    // hydrate the review snapshot
+    // Hydrate review snapshot
     function hydrateReview(){
-      if (idx !== 3) return; // step 4 (0-based)
+      if (idx !== 3) return; // step 4
       document.getElementById('rvAmount').textContent    = document.getElementById('loanAmount').value || '—';
       const termText  = term.selectedOptions[0]?.textContent || '';
       const schedText = sched.value || '';
