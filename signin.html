@@ -184,7 +184,7 @@
         formEl.addEventListener('submit', function(e){
           if(!window.__TRUSTLEND_REAL_AUTH__){
             e.preventDefault();
-            
+            localStorage.setItem('userToken','demo-token');
             var usp=new URLSearchParams(location.search);
             var redirect=usp.get('redirect')||'dashboard.html';
             location.href=redirect;
@@ -195,6 +195,5 @@
   })();
 </script>
 
-<script src="/js/nav-gate.js"></script>
 </body>
 </html>
